@@ -4,7 +4,7 @@ namespace Porifa\Stubs\Console\Commands;
 
 use Illuminate\Console\Command;
 
-class StubsCommand extends Command
+class StubsPublishCommand extends Command
 {
     public $signature = 'Stubs';
 

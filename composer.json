@@ -34,8 +34,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Porifa\\Stubs\\": "src",
-            "Porifa\\Stubs\\Database\\Factories\\": "database/factories"
+            "Porifa\\Stubs\\": "src"
         }
     },
     "autoload-dev": {
@@ -60,10 +59,7 @@
         "laravel": {
             "providers": [
                 "Porifa\\Stubs\\StubsServiceProvider"
-            ],
-            "aliases": {
-                "Stubs": "Porifa\\Stubs\\Facades\\Stubs"
-            }
+            ]
         }
     },
     "minimum-stability": "dev",
