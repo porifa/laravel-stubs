@@ -1,17 +1,17 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "porifa/laravel-stubs",
+    "description": "The Laravel stubs according to Porifa's choice",
     "keywords": [
-        ":vendor_name",
+        "porifa",
         "laravel",
-        ":package_slug"
+        "laravel-stubs"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/porifa/laravel-stubs",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Aamir Sohail KmAs",
+            "email": "AamirSohailKmAs@gmail.com",
             "role": "Developer"
         }
     ],
@@ -34,13 +34,13 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\YourPackageName\\": "src",
-            "VendorName\\YourPackageName\\Database\\Factories\\": "database/factories"
+            "Porifa\\Stubs\\": "src",
+            "Porifa\\Stubs\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\YourPackageName\\Tests\\": "tests"
+            "Porifa\\Stubs\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -50,15 +50,19 @@
         "test-coverage": "vendor/bin/pest --coverage"
     },
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "phpstan/extension-installer": true
+        }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\YourPackageName\\YourPackageNameServiceProvider"
+                "Porifa\\Stubs\\StubsServiceProvider"
             ],
             "aliases": {
-                "YourPackageName": "VendorName\\YourPackageName\\Facades\\YourPackageName"
+                "Stubs": "Porifa\\Stubs\\Facades\\Stubs"
             }
         }
     },

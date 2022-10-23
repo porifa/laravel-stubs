@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\YourPackageName\Console\Commands;
+namespace Porifa\Stubs\Console\Commands;
 
 use Illuminate\Console\Command;
 
-class YourPackageNameCommand extends Command
+class StubsCommand extends Command
 {
-    public $signature = 'YourPackageName';
+    public $signature = 'Stubs';
 
     public $description = 'My command';
 

@@ -1,26 +1,12 @@
-<!--delete-->
-# How to use and replace placeholders
 
-Use this template and Clone it locally
+# The Laravel stubs according to Porifa's choice
 
-Open terminal in workspace root directory
-
-```bash
-php setup
-```
-
-This setup will guide you through creating your package files.
-
-
-<!--/delete-->
-# :package_description
-
-[![Stable Version](https://img.shields.io/packagist/v/:vendor_slug/:package_slug.svg?style=flat-square)](https://packagist.org/packages/:vendor_slug/:package_slug)
-[![GitHub Tests Action Status](<https://img.shields.io/github/workflow/status/:vendor_slug/:package_slug/tests?label=Tests%20(Pest)>)](https://github.com/:vendor_slug/:package_slug/actions?query=workflow%3Apest+branch%3Amain)
-[![GitHub Code Style Action Status](<https://img.shields.io/github/workflow/status/:vendor_slug/:package_slug/pint?label=Code%20Style%20(Pint)>)](https://github.com/:vendor_slug/:package_slug/actions?query=workflow%3A"pint"+branch%3Amain)
-[![Quality Score](https://img.shields.io/scrutinizer/g/:vendor_slug/:package_slug.svg?style=flat-square)](https://scrutinizer-ci.com/g/:vendor_slug/:package_slug)
-[![Downloads](https://img.shields.io/packagist/dt/:vendor_slug/:package_slug.svg?style=flat-square)](https://packagist.org/packages/:vendor_slug/:package_slug)
-[![License](https://img.shields.io/packagist/l/:vendor_slug/:package_slug.svg?style=flat-square)](https://packagist.org/packages/:vendor_slug/:package_slug)
+[![Stable Version](https://img.shields.io/packagist/v/porifa/laravel-stubs.svg?style=flat-square)](https://packagist.org/packages/porifa/laravel-stubs)
+[![GitHub Tests Action Status](<https://img.shields.io/github/workflow/status/porifa/laravel-stubs/tests?label=Tests%20(Pest)>)](https://github.com/porifa/laravel-stubs/actions?query=workflow%3Apest+branch%3Amain)
+[![GitHub Code Style Action Status](<https://img.shields.io/github/workflow/status/porifa/laravel-stubs/pint?label=Code%20Style%20(Pint)>)](https://github.com/porifa/laravel-stubs/actions?query=workflow%3A"pint"+branch%3Amain)
+[![Quality Score](https://img.shields.io/scrutinizer/g/porifa/laravel-stubs.svg?style=flat-square)](https://scrutinizer-ci.com/g/porifa/laravel-stubs)
+[![Downloads](https://img.shields.io/packagist/dt/porifa/laravel-stubs.svg?style=flat-square)](https://packagist.org/packages/porifa/laravel-stubs)
+[![License](https://img.shields.io/packagist/l/porifa/laravel-stubs.svg?style=flat-square)](https://packagist.org/packages/porifa/laravel-stubs)
 
 This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
 
@@ -29,13 +15,13 @@ This is where your description should go. Limit it to a paragraph or two. Consid
 You can install the package via composer:
 
 ```bash
-composer require :vendor_slug/:package_slug
+composer require porifa/laravel-stubs
 ```
 
 You can publish the migrations with:
 
 ```bash
-php artisan vendor:publish --tag=":package_slug-migrations"
+php artisan vendor:publish --tag="laravel-stubs-migrations"
 ```
 
 Now run the migrations with:
@@ -47,7 +33,7 @@ php artisan migrate
 You can publish the config file with:
 
 ```bash
-php artisan vendor:publish --tag=":package_slug-config"
+php artisan vendor:publish --tag="laravel-stubs-config"
 ```
 
 This is the contents of the published config file:
@@ -60,14 +46,14 @@ return [
 Optionally, you can publish the views using
 
 ```bash
-php artisan vendor:publish --tag=":package_slug-views"
+php artisan vendor:publish --tag="laravel-stubs-views"
 ```
 
 ## Usage
 
 ```php
-$variable = new VendorName\YourPackageName();
-echo $variable->echoPhrase('Hello, VendorName!');
+$stubs = new Porifa\Stubs();
+echo $stubs->echoPhrase('Hello, Porifa!');
 ```
 
 ## Testing
@@ -82,7 +68,7 @@ Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed re
 
 ## Contributing
 
-Please see [CONTRIBUTING](https://github.com/:author_username/.github/blob/main/CONTRIBUTING.md) for details.
+Please see [CONTRIBUTING](https://github.com/AamirSohailKmAs/.github/blob/main/CONTRIBUTING.md) for details.
 
 ## Security Vulnerabilities
 
@@ -90,7 +76,7 @@ Please review [our security policy](../../security/policy) on how to report secu
 
 ## Credits
 
--   [:author_name](https://github.com/:author_username)
+-   [Aamir Sohail KmAs](https://github.com/AamirSohailKmAs)
 -   [All Contributors](../../contributors)
 
 ## License
