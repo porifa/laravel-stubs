@@ -7,52 +7,32 @@
 [![Downloads](https://img.shields.io/packagist/dt/porifa/laravel-stubs.svg?style=flat-square)](https://packagist.org/packages/porifa/laravel-stubs)
 [![License](https://img.shields.io/packagist/l/porifa/laravel-stubs.svg?style=flat-square)](https://packagist.org/packages/porifa/laravel-stubs)
 
-This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
+This repo contains customized stubs according to Porifa's choice.
 
 ## Installation
 
 You can install the package via composer:
 
 ```bash
-composer require porifa/laravel-stubs
-```
-
-You can publish the migrations with:
-
-```bash
-php artisan vendor:publish --tag="laravel-stubs-migrations"
-```
-
-Now run the migrations with:
-
-```bash
-php artisan migrate
-```
-
-You can publish the config file with:
-
-```bash
-php artisan vendor:publish --tag="laravel-stubs-config"
-```
-
-This is the contents of the published config file:
-
-```php
-return [
-];
-```
-
-Optionally, you can publish the views using
-
-```bash
-php artisan vendor:publish --tag="laravel-stubs-views"
+composer require porifa/laravel-stubs --dev
 ```
 
 ## Usage
 
-```php
-$stubs = new Porifa\Stubs();
-echo $stubs->echoPhrase('Hello, Porifa!');
+You can publish the stubs using this command:
+
+```bash
+php artisan porifa-stubs:publish
+```
+
+Optionally, you can keep your stubs up to date with every update, add this composer hook to your composer.json file:
+
+```json
+"scripts": {
+    "post-update-cmd": [
+        "@php artisan porifa-stubs:publish --force"
+    ]
+}
 ```
 
 ## Testing
@@ -67,7 +47,7 @@ Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed re
 
 ## Contributing
 
-Please see [CONTRIBUTING](https://github.com/AamirSohailKmAs/.github/blob/main/CONTRIBUTING.md) for details.
+Please see [CONTRIBUTING](https://github.com/porifa/.github/blob/main/CONTRIBUTING.md) for details.
 
 ## Security Vulnerabilities
 
