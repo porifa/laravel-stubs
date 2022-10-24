@@ -42,8 +42,10 @@ class StubsPublishCommand extends Command
         foreach ($files as $file) {
             $targetFile = $this->targetFile($file);
 
-            $published++;
-            file_put_contents($targetFile, file_get_contents($file));
+            if (! file_exists($targetFile)) {
+                $published++;
+                file_put_contents($targetFile, file_get_contents($file));
+            }
         }
 
         return $published;
