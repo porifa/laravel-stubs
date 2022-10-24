@@ -32,7 +32,7 @@ class StubsPublishCommand extends Command
 
         $published = $this->publish($files);
 
-        $this->components->info("Stubs published {$published} /" . count($files));
+        $this->info("Stubs published {$published} /" . count($files));
     }
 
     public function publish(array $files): int
