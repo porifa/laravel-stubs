@@ -1,9 +1,8 @@
-
 # The Laravel stubs according to Porifa's choice
 
 [![Stable Version](https://img.shields.io/packagist/v/porifa/laravel-stubs.svg?style=flat-square)](https://packagist.org/packages/porifa/laravel-stubs)
-[![GitHub Tests Action Status](<https://img.shields.io/github/workflow/status/porifa/laravel-stubs/tests?label=Tests%20(Pest)>)](https://github.com/porifa/laravel-stubs/actions?query=workflow%3Apest+branch%3Amain)
-[![GitHub Code Style Action Status](<https://img.shields.io/github/workflow/status/porifa/laravel-stubs/pint?label=Code%20Style%20(Pint)>)](https://github.com/porifa/laravel-stubs/actions?query=workflow%3A"pint"+branch%3Amain)
+[![GitHub Tests Action Status](<https://img.shields.io/github/workflow/status/porifa/laravel-stubs/pest?label=Tests%20(Pest)>)](https://github.com/porifa/laravel-stubs/actions?query=workflow%3Apest+branch%3Amain)
+[![GitHub Code Style Action Status](<https://img.shields.io/github/workflow/status/porifa/laravel-stubs/Pint?label=Code%20Style%20(Pint)>)](https://github.com/porifa/laravel-stubs/actions?query=workflow%3A"Pint"+branch%3Amain)
 [![Quality Score](https://img.shields.io/scrutinizer/g/porifa/laravel-stubs.svg?style=flat-square)](https://scrutinizer-ci.com/g/porifa/laravel-stubs)
 [![Downloads](https://img.shields.io/packagist/dt/porifa/laravel-stubs.svg?style=flat-square)](https://packagist.org/packages/porifa/laravel-stubs)
 [![License](https://img.shields.io/packagist/l/porifa/laravel-stubs.svg?style=flat-square)](https://packagist.org/packages/porifa/laravel-stubs)
