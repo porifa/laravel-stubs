@@ -3,17 +3,54 @@
 namespace Porifa\Stubs\Console\Commands;
 
 use Illuminate\Console\Command;
+use Illuminate\Console\ConfirmableTrait;
+use Illuminate\Filesystem\Filesystem;
 
 class StubsPublishCommand extends Command
 {
-    public $signature = 'Stubs';
+    use ConfirmableTrait;
 
-    public $description = 'My command';
+    public $signature = 'porifa-stubs:publish';
 
-    public function handle(): int
+    public $description = 'Publish all stubs customization by porifa';
+
+    public $stubsPath;
+
+    public function handle()
     {
-        $this->comment('All done');
+        $this->stubsPath = $this->laravel->basePath('stubs');
 
-        return self::SUCCESS;
+        if (! $this->confirmToProceed()) {
+            return 1;
+        }
+
+        if (! is_dir($this->stubsPath)) {
+            (new Filesystem())->makeDirectory($this->stubsPath);
+        }
+
+        $files = glob(__DIR__ . '/../../../stubs/*.stub');
+
+        $published = $this->publish($files);
+
+        $this->components->info("Stubs published {$published} /" . count($files));
+    }
+
+    public function publish(array $files): int
+    {
+        $published = 0;
+
+        foreach ($files as $file) {
+            $targetFile = $this->targetFile($file);
+
+            $published++;
+            file_put_contents($targetFile, file_get_contents($file));
+        }
+
+        return $published;
+    }
+
+    public function targetFile($file): string
+    {
+        return $this->stubsPath . '/' . substr($file, strpos($file, '../stubs/') + 9);
     }
 }
