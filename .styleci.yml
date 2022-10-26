@@ -1,4 +1,4 @@
 preset: laravel
 version: 8.1
 enabled:
-  - single_import_per_statement
+  - single_trait_insert_per_statement
