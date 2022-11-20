@@ -10,7 +10,9 @@ class StubsPublishCommand extends Command
 {
     use ConfirmableTrait;
 
-    public $signature = 'porifa-stubs:publish {--force : Overwrite any existing files}';
+    public $signature = 'porifa-stubs:publish
+                        {--existing : Publish and overwrite only the files that have already been published}
+                        {--force : Overwrite any existing files}';
 
     public $description = 'Publish all stubs customization by porifa';
 
@@ -42,7 +44,9 @@ class StubsPublishCommand extends Command
         foreach ($files as $file) {
             $targetFile = $this->targetFile($file);
 
-            if (! file_exists($targetFile) || $this->option('force')) {
+            if ((! $this->option('existing') && (! file_exists($targetFile) || $this->option('force')))
+                || ($this->option('existing') && file_exists($targetFile))
+            ) {
                 $published++;
                 file_put_contents($targetFile, file_get_contents($file));
             }
